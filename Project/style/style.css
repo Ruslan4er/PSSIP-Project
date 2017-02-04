@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+
+
+#conteiner {
+	font-family:Georgia, "Times New Roman", Times, 					serif;
+}
+
+#header{
+	padding:5px;
+	margin:auto;
+	text-align:center;
+	width:100%;
+	clear:both;
+
+}
+
+#menu{
+	float: left;
+	width:200px;
+}
+#content{
+	float: left;
+	width:calc(100% - 200px);
+	height:auto;
+	}
+	
+#footer{
+	clear:both;
+	padding:5px;
+	margin:auto;
+	text-align:center;
+	width:100%;
+}
+
+.ContentClass 
+{
+	float:inherit;
+}
+
+
+.ContentClass img{
+	margin:2px;
+	border:0;
+	}
+
+
+
