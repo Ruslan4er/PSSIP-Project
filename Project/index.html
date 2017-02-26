@@ -1,0 +1,36 @@
+﻿<!DOCTYPE>
+<html ng-app="guitar">
+<head>
+<base href="/">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Документ без названия</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/main.js"></script>
+
+
+
+<body>
+<div id="header"> 
+   <img src="img/head.png">
+</div>
+
+<div id="menu"> 
+    <a href="/#!/gallery">Галерея</a> <br>
+    <a href="/#!/text">Описание картинок</a> <br>
+    <a href="/#!/addNewImage">Добавление картинок</a>
+</div>
+
+<div ng-view id="content">
+Loding..  </div>
+
+<div id="footer">
+    <p>Footer</p>
+</div>
+
+
+
+</body>
+</html>

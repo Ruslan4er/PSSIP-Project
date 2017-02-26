@@ -1,0 +1,21 @@
+
+<div  id ='addNewImg'>
+	<p>
+		Enter Name:
+		<input type="text" ng-model='newImgName'>
+	</p>
+
+	<p> 
+		Enter Src:
+		<input type="text" ng-model='newImgUrl' >
+	</p>
+
+	<input type="button" ng-click="add()" value="Add">	
+</div>
+
+<div id="preview">
+	{{newImgName}}
+	<img ng-src="{{newImgUrl}}"/>
+</div>
+
+
