@@ -26,12 +26,14 @@ angular.module('guitar',['ngRoute'])
 
 		var imagesObj=[
 			{
-			  name:'mersedes',
+			  name:'Image № 1',
 			  src:'img/1.jpg',
+			  description:'Описание первой картинки'
 			},
 			{
-			  name:'dfghjkgxszz',
+			  name:'Image № 2',
 			  src:'img/2.jpg',
+  			  description:'Описание первой картинки'
 			}
 
 		];
@@ -68,21 +70,23 @@ angular.module('guitar',['ngRoute'])
 
 	}])
 
-.controller('AddNewImgController', ['$scope', 'DataImg', function ($scope, DataImg){
-	//Контроллер для добавления новой картинки
-	$scope.newImgUrl;
-	$scope.newImgName;
-	
-		$scope.saveText= function(){
-			DataImg.ImgName = $scope.newImgName;
-		}
-
-		$scope.add=function(){
-			var newObj = {
-				name: $scope.newImgName,
-				src: $scope.newImgUrl
+	.controller('AddNewImgController', ['$scope', 'DataImg', function ($scope, DataImg){
+		//Контроллер для добавления новой картинки
+		$scope.newImgUrl;
+		$scope.newImgName;
+		$scope.newImgDescription;
+		
+			$scope.saveText= function(){
+				DataImg.ImgName = $scope.newImgName;
 			}
-		  DataImg.addImg(newObj);
-		}
 
-}]);
+			$scope.add=function(){
+				var newObj = {
+					name: $scope.newImgName,
+					src: $scope.newImgUrl,
+				  	description: $scope.newImgDescription
+				}
+			  DataImg.addImg(newObj);
+			}
+
+	}]);
