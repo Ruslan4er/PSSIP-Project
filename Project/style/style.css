@@ -7,25 +7,35 @@
 #header{
 	margin:auto;
 	padding:5px;
-	margin:auto;
 	text-align:center;
 	width:100%;
 	clear:both;
 
 }
 #header img{
-	height: 180px;
-	width: 500px;
+	height: 280px;
+	width: 99%;
 	
 }
 #menu{
+	background-color: 9999ff;
+
 	float: left;
-	width:200px;
-	height: 400px;
+	width:250px;
+	height: 70%;
 }
+#menu h3{
+	font-style: italic;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+#menu a{
+	color: white;
+}
+
+
 #content{
 	float: left;
-	width:calc(100% - 200px);
+	width:calc(100% - 250px);
 	height:auto;
 	}
 
@@ -51,8 +61,15 @@
 	clear:both;
 	padding:5px;
 	margin:auto;
-	text-align:center;
+	text-align:left;
 	width:100%;
+
+}
+
+#footer img{
+	height: 100px;
+	width: 99%;
+	
 }
 
 .ContentClass {
