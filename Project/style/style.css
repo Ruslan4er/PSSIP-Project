@@ -18,11 +18,13 @@
 	
 }
 #menu{
-	background-color: 9999ff;
-
+	background-image: url(/img/menu.jpeg);
+	background-size: cover;
 	float: left;
-	width:250px;
-	height: 70%;
+	width:240px;
+	height: auto;
+	 border:solid 3px #ffffff;
+   
 }
 #menu h3{
 	font-style: italic;
@@ -31,12 +33,20 @@
 #menu a{
 	color: white;
 }
-
+#menu img{
+	margin-left: 60px;
+}
 
 #content{
+   /* background: linear-gradient(to right, #ffffff, #a2ecf5);*/
+    background-image: url(/img/content2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 	float: left;
 	width:calc(100% - 250px);
 	height:auto;
+
 	}
 
 #addNewImg{
@@ -58,11 +68,15 @@
 }
 	
 #footer{
+	background-image: url(/img/footer.png);
+	 background-repeat: no-repeat;
+	background-size: cover;
 	clear:both;
 	padding:5px;
 	margin:auto;
-	text-align:left;
-	width:100%;
+	text-align:right;
+	width:99%;
+	color: #f83bff;
 
 }
 
