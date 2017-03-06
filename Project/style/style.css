@@ -2,11 +2,13 @@
 
 #conteiner{
 	font-family:Georgia, "Times New Roman", Times,serif;
+	background-image: url(/img/content2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #header{
-	margin:auto;
-	padding:5px;
+	
 	text-align:center;
 	width:100%;
 	clear:both;
@@ -14,7 +16,7 @@
 }
 #header img{
 	height: 280px;
-	width: 99%;
+	width: 100%;
 	
 }
 #menu{
@@ -23,7 +25,7 @@
 	float: left;
 	width:240px;
 	height: auto;
-	 border:solid 3px #ffffff;
+	/*border:solid 3px #ffffff;*/
    
 }
 #menu h3{
@@ -39,9 +41,7 @@
 
 #content{
    /* background: linear-gradient(to right, #ffffff, #a2ecf5);*/
-    background-image: url(/img/content2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    
 
 	float: left;
 	width:calc(100% - 250px);
