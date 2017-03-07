@@ -26,14 +26,24 @@ angular.module('guitar',['ngRoute'])
 
 		var imagesObj=[
 			{
-			  name:'Image № 1',
-			  src:'img/1.jpg',
-			  description:'Описание первой картинки'
+			  name:'Judy Hopps',
+			  src:'img/Judy_Hopps.png',
+			  description:'Описание зайки'
 			},
 			{
-			  name:'Image № 2',
-			  src:'img/2.jpg',
-  			  description:'Описание первой картинки'
+			  name:'Nick Wilde',
+			  src:'img/Nick_Wilde.png',
+  			  description:'Описание лиса'
+			},
+			{
+			  name:'Officer Clawhauser',
+			  src:'img/Officer_Clawhauser.png',
+  			  description:'Описание офицера'
+			},
+			{
+			  name:'Chief Bogo',
+			  src:'img/Chief_Bogo.jpg',
+  			  description:'Описание шерифа'
 			}
 
 		];

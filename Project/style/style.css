@@ -8,46 +8,45 @@
 }
 
 #header{
-	
 	text-align:center;
 	width:100%;
 	clear:both;
-
 }
+
 #header img{
 	height: 280px;
 	width: 100%;
-	
 }
+
 #menu{
 	background-image: url(/img/menu.jpeg);
 	background-size: cover;
 	float: left;
 	width:240px;
 	height: auto;
-	/*border:solid 3px #ffffff;*/
-   
+	padding-left: 10px;
+	/*border:solid 3px #ffffff;*/  
 }
+
 #menu h3{
 	font-style: italic;
 	font-family: Arial, Helvetica, Verdana, sans-serif;
 }
+
 #menu a{
 	color: white;
 }
+
 #menu img{
 	margin-left: 60px;
 }
 
 #content{
    /* background: linear-gradient(to right, #ffffff, #a2ecf5);*/
-    
-
 	float: left;
 	width:calc(100% - 250px);
 	height:auto;
-
-	}
+}
 
 #addNewImg{
 	float: left;
@@ -60,16 +59,18 @@
 	float: left;
 	width:calc(100% - 350px);
 }
+
 #preview img{
 	margin:2px;
 	border:0;
 	width:300px;
 	height: 300px;
+	border: 3px solid #00a8e1
 }
 	
 #footer{
 	background-image: url(/img/footer.png);
-	 background-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
 	clear:both;
 	padding:5px;
@@ -77,28 +78,22 @@
 	text-align:right;
 	width:99%;
 	color: #f83bff;
-
 }
 
 #footer img{
 	height: 100px;
-	width: 99%;
-	
+	width: 99%;	
 }
 
-.ContentClass {
+.imageGalleryClass {
 	float:inherit;
 	margin:7px;
 	text-align: center;
+	padding-left: 20px;
 }
 
-
-.ContentClass img{
-	
+.imageGalleryClass img{	
 	border:0;
 	width:300px;
 	height: 300px;	
-	}
-
-
-
+	border: 3px solid #00a8e1
