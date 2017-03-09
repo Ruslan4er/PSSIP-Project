@@ -1,10 +1,16 @@
 <h1 align="center" >
 	Галерея		
 </h1>
-	<div ng-repeat="image in imgArray" class="imageGalleryClass">
-		<p>
-			{{image.name}}
-			<br>
-	    	<img ng-src="{{image.src}}">
-	    </p>
-    </div>
+<div>
+	<label ng-repeat="extension in extensionsArray">
+		{{extension.name}}
+		<input type="checkbox" ng-model="extension.isChecked">
+	</label>
+</div>
+<div ng-repeat="image in imgArray | filter:filterByExtension" class="imageGalleryClass">
+	<p>
+		{{image.name}}
+		<br>
+		<img ng-src="{{image.src}}">
+	</p>
+</div>

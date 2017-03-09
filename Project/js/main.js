@@ -67,11 +67,38 @@ angular.module('guitar',['ngRoute'])
 		$scope.imgArray = DataImg.getImgObj();
 		$scope.newImg='3.jpg';
 		$scope.name=4;
-		$scope.addOne=function()
-		{
-		$scope.name++;
+		$scope.addOne = function() {
+			$scope.name++;
+		};
+
+		class Extension {
+			constructor(extensionChecker, name) {
+			    this.name = name;
+				this.extensionChecker = extensionChecker;
+				this.isChecked = false;
+			}
+
+			check(path) {
+			    return this.extensionChecker.test(path);
+            }
 		}
 
+		$scope.extensionsArray = [
+		    new Extension(/\.jpe?g$/i, 'jpg'),
+            new Extension(/\.png$/i, 'png'),
+            new Extension(/\.(?!jpe?g|png)$/i, 'Остальное')
+        ];
+
+		$scope.filterByExtension = function (img) {
+            const selectedExtensions = $scope.extensionsArray.filter(extension => extension.isChecked);
+            if (selectedExtensions.length) {
+                return selectedExtensions.some(extension => {
+                   return extension.check(img.src);
+                });
+            } else {
+                return true;
+            }
+        };
 	}])
 
 
