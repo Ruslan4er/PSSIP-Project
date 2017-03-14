@@ -17,7 +17,7 @@ angular.module('guitar',['ngRoute'])
 			redirectTo:'/gallery'
 		});
 
-		 //$locationProvider.html5Mode(true);
+		 //	$locationProvider.html5Mode(true);
 
 	}])
 
@@ -99,10 +99,22 @@ angular.module('guitar',['ngRoute'])
                 return true;
             }
         };
+
+		//Всплывающие подсказки test 	
+				$scope.showtooltip = false;
+		
+				$scope.hideTooltip = function(){
+					$scope.showtooltip = false;
+				}
+
+				$scope.toggleTooltip = function(e){
+					event.stopPropagation();
+					$scope.showtooltip = !$scope.showtooltip;
+				}
 	}])
 
 
-	.controller('TextController', ['$scope', 'DataImg', function ($scope, DataImg){
+	.controller('DescriptionController', ['$scope', 'DataImg', function ($scope, DataImg){
 	//Контроллер для описания
 
 	}])
@@ -112,18 +124,20 @@ angular.module('guitar',['ngRoute'])
 		$scope.newImgUrl;
 		$scope.newImgName;
 		$scope.newImgDescription;
+		//$scope.newImgRate;
 		
-			$scope.saveText= function(){
-				DataImg.ImgName = $scope.newImgName;
-			}
+		$scope.saveText= function(){
+			DataImg.ImgName = $scope.newImgName;
+		}
 
-			$scope.add=function(){
-				var newObj = {
-					name: $scope.newImgName,
-					src: $scope.newImgUrl,
-				  	description: $scope.newImgDescription
-				}
-			  DataImg.addImg(newObj);
+		$scope.add=function(){
+			var newObj = {
+				name: $scope.newImgName,
+				src: $scope.newImgUrl,
+			  	description: $scope.newImgDescription,
+				//rate: $scope.newImgRate
 			}
+		  DataImg.addImg(newObj);
+		}
 
 	}]);

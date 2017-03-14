@@ -1,16 +1,24 @@
 <h1 align="center" >
 	Галерея		
 </h1>
-<div>
+<div align="right">
 	<label ng-repeat="extension in extensionsArray">
 		{{extension.name}}
 		<input type="checkbox" ng-model="extension.isChecked">
 	</label>
 </div>
-<div ng-repeat="image in imgArray | filter:filterByExtension" class="imageGalleryClass">
-	<p>
+<div ng-repeat="image in imgArray | filter:filterByExtension"  class="imageGalleryClass" ng-mouseover="toggleTooltip()" ng-mouseout="hideTooltip()" >
+	<p >
+		<div id="main" ng-show="showtooltip"  >	
+			<p class="tooltip">{{image.description}}</p>
+		</div>
 		{{image.name}}
 		<br>
-		<img ng-src="{{image.src}}">
+		<img ng-src="{{image.src}}"  >
 	</p>
+
 </div>
+
+
+
+    
