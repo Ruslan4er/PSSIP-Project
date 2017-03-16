@@ -18,7 +18,6 @@ angular.module('guitar',['ngRoute'])
 		});
 
 		 //	$locationProvider.html5Mode(true);
-
 	}])
 
 	.service('DataImg', function() {
@@ -45,7 +44,6 @@ angular.module('guitar',['ngRoute'])
 			  src:'img/Chief_Bogo.jpg',
   			  description:'Описание шерифа'
 			}
-
 		];
 
 	 function addNewImg(newImg){
@@ -65,11 +63,6 @@ angular.module('guitar',['ngRoute'])
 	.controller('IndexController', ['$scope', 'DataImg', function ($scope, DataImg){
 	
 		$scope.imgArray = DataImg.getImgObj();
-		$scope.newImg='3.jpg';
-		$scope.name=4;
-		$scope.addOne = function() {
-			$scope.name++;
-		};
 
 		class Extension {
 			constructor(extensionChecker, name) {
@@ -101,15 +94,15 @@ angular.module('guitar',['ngRoute'])
         };
 
 		//Всплывающие подсказки test 	
-				$scope.showtooltip = false;
+				this.showtooltip = false;
 		
 				$scope.hideTooltip = function(){
-					$scope.showtooltip = false;
+					this.showtooltip = false;
 				}
 
 				$scope.toggleTooltip = function(e){
 					event.stopPropagation();
-					$scope.showtooltip = !$scope.showtooltip;
+					this.showtooltip = !$scope.showtooltip;
 				}
 	}])
 
