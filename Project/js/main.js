@@ -27,22 +27,26 @@ angular.module('guitar',['ngRoute'])
 			{
 			  name:'Judy Hopps',
 			  src:'img/Judy_Hopps.png',
-			  description:'Описание зайки'
+			  description:'Описание зайки',
+			  rate: {value: 5}
 			},
 			{
 			  name:'Nick Wilde',
 			  src:'img/Nick_Wilde.png',
-  			  description:'Описание лиса'
+  			  description:'Описание лиса',
+			  rate: {value: 5}
 			},
 			{
 			  name:'Officer Clawhauser',
 			  src:'img/Officer_Clawhauser.png',
-  			  description:'Описание офицера'
+  			  description:'Описание офицера',
+			  rate: {value: 4}
 			},
 			{
 			  name:'Chief Bogo',
 			  src:'img/Chief_Bogo.jpg',
-  			  description:'Описание шерифа'
+  			  description:'Описание шерифа',
+			  rate: {value: 3}
 			}
 		];
 
@@ -68,7 +72,7 @@ angular.module('guitar',['ngRoute'])
 			constructor(extensionChecker, name) {
 			    this.name = name;
 				this.extensionChecker = extensionChecker;
-				this.isChecked = false;
+				this.isChecked = true;
 			}
 
 			check(path) {
@@ -93,7 +97,7 @@ angular.module('guitar',['ngRoute'])
             }
         };
 
-		//Всплывающие подсказки test 	
+		//Всплывающие подсказки 
 				this.showtooltip = false;
 		
 				$scope.hideTooltip = function(){
@@ -117,8 +121,9 @@ angular.module('guitar',['ngRoute'])
 		$scope.newImgUrl;
 		$scope.newImgName;
 		$scope.newImgDescription;
-		//$scope.newImgRate;
-		
+		$scope.newImgRate = {};
+		$scope.arrayOfRates=[1,2,3,4,5];
+
 		$scope.saveText= function(){
 			DataImg.ImgName = $scope.newImgName;
 		}
@@ -128,7 +133,7 @@ angular.module('guitar',['ngRoute'])
 				name: $scope.newImgName,
 				src: $scope.newImgUrl,
 			  	description: $scope.newImgDescription,
-				//rate: $scope.newImgRate
+				rate: $scope.newImgRate.value
 			}
 		  DataImg.addImg(newObj);
 		}

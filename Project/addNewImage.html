@@ -18,19 +18,12 @@
 		<input type="text" ng-model='newImgDescription'>
 	</p>
 
-	<p>
-		Введите оценку:
-	<!--	1
-		<input type="radio" ng-model=''  >
-		2
-		<input type="radio" ng-model='' >
-		3
-		<input type="radio" ng-model=''>
-		4
-		<input type="radio" ng-model=''>
-		5
-		<input type="radio" ng-model=''>
-		-->
+	<p>	Введите оценку:
+	<label ng-repeat="rate in arrayOfRates">
+		<input type="radio" ng-model="newImgRate.value" ng-checked="newImgRate==rate" ng-value="rate" />
+		{{rate}}
+	</label>
+
 	</p>
 
 	<input type="button" ng-click="add()" value="Добавить картинку">
@@ -48,5 +41,4 @@
 		{{newImgDescription}}
 	</p>
 </div>
-
 
