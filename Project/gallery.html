@@ -2,13 +2,20 @@
 	Галерея		
 </h1>
 <div align="right">
+	<select>
+		<option>Выберите героя</option>
+		<option>Judy Hopps</option>
+		<option>Nick Wilde</option>
+		<option>Clawhauser</option>
+		<option>Bogo</option>
+	</select>
 	<label ng-repeat="extension in extensionsArray">
 		{{extension.name}}
 		<input type="checkbox" ng-model="extension.isChecked">
 	</label>
 </div>
 <div ng-repeat="image in imgArray | filter:filterByExtension"  class="imageGalleryClass" ng-mouseover="toggleTooltip()" ng-mouseout="hideTooltip()" >
-	<p >
+	<p>
 		<div id="main" ng-show="showtooltip"  >	
 			<p class="tooltip">{{image.description}}</p>
 		</div>

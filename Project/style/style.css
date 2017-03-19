@@ -41,6 +41,10 @@
 	margin-left: 60px;
 }
 
+select {
+	margin-right: 30px;
+}
+
 #content{
    /* background: linear-gradient(to right, #ffffff, #a2ecf5);*/
 	float: left;
@@ -89,6 +93,18 @@
 #footer img{
 	height: 100px;
 	width: 99%;	
+}
+
+.vashkevichColor {
+	background-color: #49BC6F;
+}
+
+.zakusiloColor {
+	background-color: #6495ED;
+}
+
+.panteleevColor {
+	background-color: #FF932E;
 }
 
 .imageGalleryClass {
