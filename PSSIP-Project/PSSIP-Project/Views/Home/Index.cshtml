@@ -1,0 +1,41 @@
+﻿<!DOCTYPE>
+<html ng-app="guitar">
+<head>
+    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Документ без названия</title>
+    <link href="~/Style/style.css" rel="stylesheet" type="text/css"/>
+
+    <script src="~/Script/angular.min.js"></script>
+    <script src="~/Script/angular-route.min.js"></script>
+    <script src="~/Script/main.js"></script>
+</head>
+
+<body>
+    <div id="conteiner">
+        <div id="header">
+            <img src="img/header.png">
+        </div>
+        <div id="menu">
+            <h3>
+                <a href="/Zootopia/gallery">Галерея</a> <br><br>
+                <a href="/Zootopia/text">Описание картинок</a> <br><br>
+                <a href="/Zootopia/addNewImage">Добавление картинок</a>
+            </h3>
+            <img src="img/menu2.png">
+        </div>
+        <div ng-view id="content">
+            Loding..
+            <br>
+            <br>
+        </div>
+        <div id="footer">
+            <h3>
+                Вашкевич Алена <br>
+                Закусило Анастасия <br>
+                Пантелеев Руслан
+            </h3>
+        </div>
+    </div>
+</body>
+</html>

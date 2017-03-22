@@ -2,12 +2,9 @@
 	Галерея		
 </h1>
 <div align="right">
-	<select>
+	<select >
 		<option>Выберите героя</option>
-		<option>Judy Hopps</option>
-		<option>Nick Wilde</option>
-		<option>Clawhauser</option>
-		<option>Bogo</option>
+		<option ng-repeat="image in imgArray">{{image.name}}</option>
 	</select>
 	<label ng-repeat="extension in extensionsArray">
 		{{extension.name}}

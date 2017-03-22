@@ -144,7 +144,7 @@ h1{
 	position: absolute;
 	left:50%;
 	margin-left:-140px;
-	top:70px;
+	top:70px;	
 }
 
 .tooltip:after {
@@ -165,33 +165,3 @@ h1{
 
 
 
-.radioButtondemoBasicUsage body {
-  padding: 20px; }
-
-.radioButtondemoBasicUsage hr {
-  margin-left: -20px;
-  opacity: 0.3; }
-
-.radioButtondemoBasicUsage md-radio-group {
-  width: 150px; }
-
-.radioButtondemoBasicUsage p:last-child {
-  padding-bottom: 50px; }
-
-.radioButtondemoBasicUsage [ng-controller] {
-  padding: 0 20px; }
-
-.radioButtondemoBasicUsage .radioValue {
-  margin-left: 5px;
-  color: #0f9d58;
-  font-weight: bold;
-  padding: 5px; }
-
-.radioButtondemoBasicUsage md-icon {
-  margin: 0 20px 20px;
-  width: 128px;
-  height: 128px; }
-
-.radioButtondemoBasicUsage .ipsum {
-  color: saddlebrown;
-  font-size: 0.9em; }
