@@ -8,16 +8,21 @@
         <input type="checkbox" ng-model="extension.isChecked" > 
     </label>
 </div>
-<div ng-repeat="image in imgArray | filter:filterByExtension" class="imageGalleryClass" ng-mouseover="toggleTooltip()" ng-mouseout="hideTooltip()">
+<div ng-repeat="image in imgArray | filter:filterByExtension" class="imageGalleryClass" >
     <p>
+        <div id="main" >
+            <p class="tooltipRight" ng-show="showtooltipRight">{{image.description}}</p>
+            <p class="tooltipLeft" ng-show="showtooltipLeft">{{image.description}}</p>
+        </div>
         <div id="main" ng-show="showtooltip">
-            <p class="tooltip">{{image.description}}</p>
+            <p class="tooltipRight">{{image.description}}</p>
+            <p class="tooltipLeft">{{image.description}}</p>
         </div>
         
         {{image.name}}
         <br>
         
-        <img ng-src="{{image.src}}"  >
+        <img ng-src="{{image.src}}" ng-mouseover="toggleTooltip($index)" ng-mouseout="hideTooltip()" >
         <br>
         
         Оценка: {{image.rate.value}}

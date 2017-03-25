@@ -96,16 +96,25 @@ angular.module('guitar',['ngRoute'])
 
 	    //Всплывающие подсказки
 
-	    this.showtooltip = false;
-	 
 	    $scope.toggleTooltip = function (e) {
-	        event.stopPropagation();
-	        this.showtooltip = !$scope.showtooltip;
-	    }
+            
+	        if (e % 2 == 0) {
+                event.stopPropagation();
+                this.showtooltipRight = !$scope.showtooltipRight;
+            }
 
-	    $scope.hideTooltip = function () {
-	        this.showtooltip = false;
-	    }
+            else {
+                event.stopPropagation();
+                this.showtooltipLeft = !$scope.showtooltipLeft;             
+	        }
+
+            $scope.hideTooltip = function () {
+                this.showtooltipLeft = false;
+                this.showtooltipRight = false;
+            }
+        }
+	       
+	   
 
         /*
          $scope.toggleTooltip = function (e,image) {
