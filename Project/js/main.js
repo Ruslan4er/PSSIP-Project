@@ -1,4 +1,4 @@
-angular.module('guitar',['ngRoute'])
+﻿angular.module('guitar',['ngRoute'])
 	.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider){
 		$routeProvider
 		.when ('/gallery', {
@@ -95,15 +95,14 @@ angular.module('guitar',['ngRoute'])
         };
 
 		//Всплывающие подсказки 
-				this.showtooltip = false;
 		
-				$scope.hideTooltip = function(){
-					this.showtooltip = false;
+				$scope.hideTooltip = function(image){
+					image.showtooltip = false;
 				}
 
-				$scope.toggleTooltip = function(e){
+				$scope.toggleTooltip = function(e,image){
 					event.stopPropagation();
-					this.showtooltip = !$scope.showtooltip;
+					image.showtooltip = !image.showtooltip;
 				}
 	}])
 

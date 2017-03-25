@@ -1,23 +1,19 @@
-<h1 align="center" >
-	Добавление новой картинки		
+<h1 align="center">
+    Добавление новой картинки
 </h1>
-<div  id ='addNewImg'>
-
-	<p>
-		Введите название:
-		<input type="text" ng-model='newImgName'>
-	</p>
-
-	<p> 
-		Введите путь:
-		<input type="file" ng-model='newImgUrl' >
-	</p>	
-
-	<p>
-		Введите описание:
-		<input type="text" ng-model='newImgDescription'>
-	</p>
-
+<div id='addNewImg'>
+    <p>
+        Введите название:
+        <input type="text" ng-model='newImgName'>
+    </p>
+    <p>
+        Введите путь:
+        <input type="text" ng-model='newImgUrl'>
+    </p>
+    <p>
+        Введите описание:
+        <input type="text" ng-model='newImgDescription'>
+    </p>
     <p>
         Введите оценку:
         <label ng-repeat="rate in arrayOfRates">
@@ -25,21 +21,17 @@
             {{rate}}
         </label>
     </p>
-
-	<input type="button" ng-click="add()" value="Добавить картинку">
-<!-- Доделать очистку форм 
-	<input type="reset"  value="Очистить">	
--->
+    <input type="button" ng-click="add()" value="Добавить картинку">
+    <!-- Доделать очистку форм
+        <input type="reset"  value="Очистить">
+    -->
 </div>
-
 <div id="preview">
-	<p align="center">
-		{{newImgName}}
-		<br>
-		<img ng-src="{{newImgUrl}}"/>
-		<br>
-		{{newImgDescription}}
-	</p>
+    <p align="center">
+        {{newImgName}}
+        <br>
+        <img ng-src="{{newImgUrl}}" />
+        <br>
+        {{newImgDescription}}
+    </p>
 </div>
-
-

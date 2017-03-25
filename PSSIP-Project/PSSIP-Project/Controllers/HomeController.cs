@@ -13,9 +13,10 @@ namespace PSSIP_Project.Controllers
         {
             return View();
         }
-        public ActionResult Gallery()
+        public JsonResult GetAllImages()
         {
-            return View();
+            var test = new List<string>();
+            return Json(test, JsonRequestBehavior.AllowGet);
         }
     }
 }

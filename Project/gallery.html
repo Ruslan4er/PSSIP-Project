@@ -1,4 +1,4 @@
-<h1 align="center" >
+﻿<h1 align="center" >
 	Галерея		
 </h1>
 <div align="right">
@@ -11,7 +11,7 @@
 		<input type="checkbox" ng-model="extension.isChecked">
 	</label>
 </div>
-<div ng-repeat="image in imgArray | filter:filterByExtension"  class="imageGalleryClass" ng-mouseover="toggleTooltip()" ng-mouseout="hideTooltip()" >
+<div ng-repeat="image in imgArray | filter:filterByExtension"  class="imageGalleryClass" ng-mouseover="toggleTooltip(image)" ng-mouseout="hideTooltip(image)" >
 	<p>
 		<div id="main" ng-show="showtooltip"  >	
 			<p class="tooltip">{{image.description}}</p>

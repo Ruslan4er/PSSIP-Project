@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 #conteiner{
 	font-family:Georgia, "Times New Roman", Times,serif;
@@ -41,11 +41,19 @@
 	margin-left: 60px;
 }
 
+select {
+	margin-right: 30px;
+}
+
 #content{
    /* background: linear-gradient(to right, #ffffff, #a2ecf5);*/
 	float: left;
 	width:calc(100% - 250px);
 	height:auto;
+}
+
+.imageGalleryClass img[src$=".jpg"], .imageGalleryClass img[src$=".jpeg"] {
+	border: 3px red solid;
 }
 
 #addNewImg{
@@ -59,13 +67,12 @@
 #preview{
 	margin-left: 30px;
 	float: left;
-	width:calc(300px);
+	width: 300px;
 	word-wrap:break-word;
 }
 
 #preview img{
 	margin:2px;
-	border:0;
 	width:300px;
 	height: 300px;
 	border: 3px solid #00a8e1
@@ -88,6 +95,18 @@
 	width: 99%;	
 }
 
+.vashkevichColor {
+	background-color: #49BC6F;
+}
+
+.zakusiloColor {
+	background-color: #6495ED;
+}
+
+.panteleevColor {
+	background-color: #FF932E;
+}
+
 .imageGalleryClass {
 	float:inherit;
 	margin:7px;
@@ -95,8 +114,7 @@
 	padding-left: 20px;
 }
 
-.imageGalleryClass img{	
-	border:0;
+.imageGalleryClass img{
 	width:300px;
 	height: 300px;	
 	border: 3px solid #00a8e1
@@ -107,10 +125,9 @@ h1{
 }
 
 #main{
-
     position:relative;
-    
 }
+
 .tooltip{
 	background-color:#5c9bb7;
 
@@ -127,11 +144,10 @@ h1{
 	position: absolute;
 	left:50%;
 	margin-left:-140px;
-	top:70px;
+	top:70px;	
 }
 
-
-.tooltip:after{
+.tooltip:after {
 	/* The tip of the tooltip */
 	content:'';
 	position:absolute;
@@ -148,35 +164,4 @@ h1{
 	
 
 
-
-.radioButtondemoBasicUsage body {
-  padding: 20px; }
-
-.radioButtondemoBasicUsage hr {
-  margin-left: -20px;
-  opacity: 0.3; }
-
-.radioButtondemoBasicUsage md-radio-group {
-  width: 150px; }
-
-.radioButtondemoBasicUsage p:last-child {
-  padding-bottom: 50px; }
-
-.radioButtondemoBasicUsage [ng-controller] {
-  padding: 0 20px; }
-
-.radioButtondemoBasicUsage .radioValue {
-  margin-left: 5px;
-  color: #0f9d58;
-  font-weight: bold;
-  padding: 5px; }
-
-.radioButtondemoBasicUsage md-icon {
-  margin: 0 20px 20px;
-  width: 128px;
-  height: 128px; }
-
-.radioButtondemoBasicUsage .ipsum {
-  color: saddlebrown;
-  font-size: 0.9em; }
 
