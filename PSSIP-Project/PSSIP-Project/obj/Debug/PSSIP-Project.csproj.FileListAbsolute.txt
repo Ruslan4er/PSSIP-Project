@@ -64,3 +64,36 @@ D:\BSUIR\3 course\6 семестр\ПССИП\Project\PSSIP-Project\PSSIP-Projec
 D:\BSUIR\3 course\6 семестр\ПССИП\Project\PSSIP-Project\PSSIP-Project\obj\Debug\PSSIP-Project.csprojResolveAssemblyReference.cache
 D:\BSUIR\3 course\6 семестр\ПССИП\Project\PSSIP-Project\PSSIP-Project\obj\Debug\PSSIP-Project.dll
 D:\BSUIR\3 course\6 семестр\ПССИП\Project\PSSIP-Project\PSSIP-Project\obj\Debug\PSSIP-Project.pdb
+D:\Наш проект\PSSIP-Project\PSSIP-Project\obj\Debug\PSSIP-Project.csprojResolveAssemblyReference.cache
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\VBCSCompiler.exe.config
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\csc.exe
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\System.Collections.Immutable.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\System.Reflection.Metadata.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\vbc.exe
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\roslyn\VBCSCompiler.exe
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\PSSIP-Project.dll.config
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\PSSIP-Project.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\PSSIP-Project.pdb
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\Microsoft.Web.Infrastructure.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Helpers.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Mvc.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Razor.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Webpages.Deployment.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Webpages.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Webpages.Razor.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Razor.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Webpages.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Webpages.Deployment.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Webpages.Razor.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Helpers.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\bin\System.Web.Mvc.xml
+D:\Наш проект\PSSIP-Project\PSSIP-Project\obj\Debug\PSSIP-Project.dll
+D:\Наш проект\PSSIP-Project\PSSIP-Project\obj\Debug\PSSIP-Project.pdb
