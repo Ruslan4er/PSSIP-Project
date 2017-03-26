@@ -98,7 +98,7 @@ angular.module('guitar',['ngRoute'])
 
 	    $scope.toggleTooltip = function (e) {
             
-	        if (e % 2 == 0) {
+	        if (e % 3 == 0) {
                 event.stopPropagation();
                 this.showtooltipRight = !$scope.showtooltipRight;
             }
