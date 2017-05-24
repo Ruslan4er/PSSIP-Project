@@ -22,8 +22,9 @@
         
         {{img.Name}}
         <br>
-        
-        <img ng-src="{{img.Url}}" ng-mouseover="toggleTooltip($index)" ng-mouseout="hideTooltip()" >
+
+        <img ng-src="{{img.Url}}" ng-click="showFullImage(img.Url)" ng-mouseover="toggleTooltip($index)" ng-mouseout="hideTooltip()">
+
         <br>
         
         Оценка: {{img.Star}}

@@ -84,6 +84,21 @@ angular.module('gallery', ['ngRoute'])
     	            this.showtooltipRight = false;
     	        }
     	    }
+
+    	    $scope.showFullImage = function (imageSrc) {
+    	        	        const imageElement = document.createElement('img');
+    	        	        imageElement.src = imageSrc;
+    	        
+                	        const backdrop = document.createElement('div');
+    	        	        backdrop.classList.add('modal-backdrop');
+    	        	        backdrop.appendChild(imageElement);
+    	        
+                	        document.body.appendChild(backdrop);
+    	        	        backdrop.addEventListener('click', function () {
+    	            	            document.body.removeChild(backdrop);
+    	            	        });
+    	        	    };
+
 	       
 	   
 
