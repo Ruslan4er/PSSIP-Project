@@ -1,14 +1,17 @@
 ﻿<!DOCTYPE>
-<html ng-app="guitar">
+<html ng-app="gallery">
 <head>
     <base href="/">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    
     <title>Zootopia</title>
     <link href="~/Style/style.css" rel="stylesheet" type="text/css"/>
 
     <script src="~/Script/angular.min.js"></script>
     <script src="~/Script/angular-route.min.js"></script>
     <script src="~/Script/main.js"></script>
+    
 </head>
 
 <body>
@@ -19,10 +22,12 @@
         </div>
         <div id="menu">
             <h3>
-                <a href="/Zootopia/gallery">Галерея</a> <br><br>
-                <a href="/Zootopia/addNewImage">Добавление картинок</a> <br><br>
-                <a href="/Zootopia/aboutUs">О нас</a> 
-            </h3>
+                <ul>
+                    <li> <a href="/Zootopia/gallery">Галерея</a> </li>
+                    <li> <a href="/Zootopia/addNewImage">Добавление картинок</a> </li>
+                    <li> <a href="/Zootopia/aboutUs">О нас</a> </li>
+                </ul>
+             </h3>
             <img src="img/menu2.png">
         </div>
         <div ng-view id="content">

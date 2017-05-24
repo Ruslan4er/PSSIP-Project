@@ -1,145 +1,104 @@
-angular.module('guitar',['ngRoute'])
-	.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider){
-		$routeProvider
-		.when ('/Zootopia/gallery', {
-			templateUrl: '/views/home/gallery.html',
-			controller: 'GalleryController'
-		})
-		.when('/Zootopia/aboutUs', {
-		    templateUrl: '/views/home/aboutUs.html',
-		    controller: 'aboutUsController'
-		})
-		.when('/Zootopia/addNewImage', {
-		    templateUrl: '/views/home/addNewImage.html',
-			controller:'AddNewImgController'
-		})
-		.otherwise({
-		    redirectTo: '/Zootopia/gallery'
-		});
+angular.module('gallery', ['ngRoute'])
+    .config([
+        '$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+            $routeProvider
+                .when('/Zootopia/gallery', {
+                    templateUrl: '/views/home/gallery.html',
+                    controller: 'GalleryController'
+                })
+                .when('/Zootopia/aboutUs', {
+                    templateUrl: '/views/home/aboutUs.html',
+                    controller: 'aboutUsController'
+                })
+                .when('/Zootopia/addNewImage', {
+                    templateUrl: '/views/home/addNewImage.html',
+                    controller: 'AddNewImgController'
+                })
+                .otherwise({
+                    redirectTo: '/Zootopia/gallery'
+                });
 
-		 	$locationProvider.html5Mode(true);
-	}])
+            $locationProvider.html5Mode(true);
+        }
+    ])
+    .controller('GalleryController', [
+        '$scope', 'dataCenter', function($scope, dataCenter) {
 
-	.service('DataImg', function () {
-
-
-	    var imagesObj = [
-			{
-			    name: 'Judy Hopps',
-			    src: 'img/Judy_Hopps.png',
-			    description: 'Описание зайки',
-			    rate: { value: 5 }
-			},
-			{
-			    name: 'Nick Wilde',
-			    src: 'img/Nick_Wilde.png',
-			    description: 'Описание лиса',
-			    rate: { value: 5 }
-			},
-			{
-			    name: 'Officer Clawhauser',
-			    src: 'img/Officer_Clawhauser.png',
-			    description: 'Описание офицера',
-			    rate: { value: 4 }
-			},
-			{
-			    name: 'Chief Bogo',
-			    src: 'img/Chief_Bogo.jpg',
-			    description: 'Описание шерифа',
-			    rate: { value: 3 }
-			}
-	    ];
-
-	    function addNewImg(newImg) {
-	        imagesObj.push(newImg);
-	    }
-
-	    var result = {
-	        ImgName: 'name',
-	        getImgObj: function () {
-	            return imagesObj;
-	        },
-	        addImg: addNewImg
-	    };
-	    return result;
-	})
-
-	.controller('GalleryController', ['$scope', 'DataImg', function ($scope, DataImg) {
-
-	    $scope.imgArray = DataImg.getImgObj();
-
-	    $scope.extensionsArray = [
-			{
-			    extensionChecker: /\.jpe?g$/i,
-			    name: 'jpg'
-			},
-            {
-                extensionChecker: /\.png$/i,
-                name: 'png'
-            },
-            {
-                extensionChecker: /\.(?!jpe?g|png)$/i,
-                name: 'Остальное'
+            $scope.remove = function(url) {
+                dataCenter.remove(url);
             }
-	    ];
 
-	    $scope.filterByExtension = function (img) {
-	        const selectedExtensions = $scope.extensionsArray.filter(extension => extension.isChecked);
-	        if (selectedExtensions.length) {
-	            return selectedExtensions.some(extension => {
-	                return extension.extensionChecker.test(img.src);
-	            });
-	        } else {
-	            return true;
-	        }
-	    };
-
-	    //Всплывающие подсказки
-
-	    $scope.toggleTooltip = function (e) {
+            var defered = dataCenter.getAll();
+            defered.then(function(response) {
+                $scope.Images = response.data;
+            });
             
-	        if (e % 3 == 0) {
-                event.stopPropagation();
-                this.showtooltipRight = !$scope.showtooltipRight;
-            }
+            var a = 123;
 
-            else {
-                event.stopPropagation();
-                this.showtooltipLeft = !$scope.showtooltipLeft;             
-	        }
+     
 
-            $scope.hideTooltip = function () {
-                this.showtooltipLeft = false;
-                this.showtooltipRight = false;
-            }
-        }
+    	   // $scope.imgArray = DataImg.getImgObj();
+
+    	    $scope.extensionsArray = [
+                {
+                    extensionChecker: /\.jpe?g$/i,
+                    name: 'jpg'
+                },
+                {
+                    extensionChecker: /\.png$/i,
+                    name: 'png'
+                },
+                {
+                    extensionChecker: /\.(?!jpe?g|png)$/i,
+                    name: 'Остальное'
+                }
+    	    ];
+
+    	    $scope.filterByExtension = function (img) {
+    	        const selectedExtensions = $scope.extensionsArray.filter(extension => extension.isChecked);
+    	        if (selectedExtensions.length) {
+    	            return selectedExtensions.some(extension => {
+    	                return extension.extensionChecker.test(img.Url);
+    	            });
+    	        } else {
+    	            return true;
+    	        }
+    	    };
+
+    	    //Всплывающие подсказки
+
+    	    $scope.toggleTooltip = function (e) {
+            
+    	        if (e % 3 == 0) {
+    	            event.stopPropagation();
+    	            this.showtooltipRight = !$scope.showtooltipRight;
+    	        }
+
+    	        else {
+    	            event.stopPropagation();
+    	            this.showtooltipLeft = !$scope.showtooltipLeft;             
+    	        }
+
+    	        $scope.hideTooltip = function () {
+    	            this.showtooltipLeft = false;
+    	            this.showtooltipRight = false;
+    	        }
+    	    }
 	       
-	    $scope.showFullImage = function (imageSrc) {
-	        const imageElement = document.createElement('img');
-	        imageElement.src = imageSrc;
+	   
 
-	        const backdrop = document.createElement('div');
-	        backdrop.classList.add('modal-backdrop');
-	        backdrop.appendChild(imageElement);
-
-	        document.body.appendChild(backdrop);
-	        backdrop.addEventListener('click', function () {
-	            document.body.removeChild(backdrop);
-	        });
-	    };
-
-        /*
-         $scope.toggleTooltip = function (e,image) {
-	        event.stopPropagation();
-	        image.showtooltip = !image.showtooltip;
-	    }
-
-	    $scope.hideTooltip = function(image){
-            image.showtooltip = false;
-        }
-
-        */
-	}])
+    	    /*
+             $scope.toggleTooltip = function (e,image) {
+                event.stopPropagation();
+                image.showtooltip = !image.showtooltip;
+            }
+    
+            $scope.hideTooltip = function(image){
+                image.showtooltip = false;
+            }
+    
+            */
+    	}])
 
 
 	.controller('aboutUsController', ['$scope', 'DataImg', function ($scope, DataImg) {
@@ -147,26 +106,77 @@ angular.module('guitar',['ngRoute'])
 
 	}])
 
-	.controller('AddNewImgController', ['$scope', 'DataImg', function ($scope, DataImg) {
+	.controller('AddNewImgController', ['$scope', 'dataCenter', function ($scope, dataCenter) {
 	    //Контроллер для добавления новой картинки
-	    $scope.newImgUrl;
-	    $scope.newImgName;
-	    $scope.newImgDescription;
 	    $scope.newImgRate = {};
 	    $scope.arrayOfRates = [1, 2, 3, 4, 5];
+	    $scope.img = {};
 
-	    $scope.saveText = function () {
-	        DataImg.ImgName = $scope.newImgName;
+	    $scope.addImg = function() {
+	        dataCenter.add($scope.img.name, $scope.img.data,$scope.img.desc, $scope.img.star);
+	        $scope.img = {};
 	    }
+	}])
 
-	    $scope.add = function () {
-	        var newObj = {
-	            name: $scope.newImgName,
-	            src: $scope.newImgUrl,
-	            description: $scope.newImgDescription,
-	            rate: $scope.newImgRate.value
-	        }
-	        DataImg.addImg(newObj);
-	    }
+    .service('dataCenter', ['$http', function($http) {
+            return {
+                getAll: getAll,
+                add: add,
+                remove: remove
+            };
 
-	}]);
+            function getAll() {
+                return $http({
+                    url: 'http://localhost:50368/Image/GetImage'
+                });
+            }
+
+            function add(fileName, data) {
+                var respons = $http({
+                    method: 'POST',
+                    url: 'http://localhost:50368/Image/AddImgAjax',
+                    data: {
+                        fileName: fileName,
+                        data: data
+                    },
+                    headers: { 'Accept': 'application/json' }
+                });
+                return respons;
+            };
+
+            function remove(url) {
+                return $http({
+                    method: 'POST',
+                    url: 'http://localhost:50368/Image/RemoveImage',
+                    data: {
+                        url: url
+                    },
+                    headers: { 'Accept': 'application/json' }
+                });
+            }
+
+        }
+    ])
+    .directive("fileread", [
+        function() {
+            return {
+                scope: {
+                    fileread: "="
+                },
+                link: function(scope, elemet, attributes) {
+                    elemet.bind("change", function(changeEvent) {
+                        var reader = new FileReader();
+                        reader.onload = function(loadEvent) {
+                            scope.$apply(function() {
+                                scope.fileread = loadEvent.target.result;
+                            });
+                        }
+                        reader.readAsDataURL(changeEvent.target.files[0]);
+                    });
+                }
+            }
+        }
+    ]);;
+
+
+

@@ -2,29 +2,30 @@
     Галерея
 </h1>
 <div align="right">
-   
-    <label ng-repeat="extension in extensionsArray" >
+
+    <label ng-repeat="extension in extensionsArray">
         {{extension.name}}
-        <input type="checkbox" ng-model="extension.isChecked" > 
+        <input type="checkbox" ng-model="extension.isChecked">
     </label>
 </div>
-<div ng-repeat="image in imgArray | filter:filterByExtension" class="imageGalleryClass" >
+
+<div ng-repeat="img in Images | filter:filterByExtension" class="imageGalleryClass" >
     <p>
         <div id="main" >
-            <p class="tooltipRight" ng-show="showtooltipRight">{{image.description}}</p>
-            <p class="tooltipLeft" ng-show="showtooltipLeft">{{image.description}}</p>
+            <p class="tooltipRight" ng-show="showtooltipRight">{{img.Extension}}</p>
+            <p class="tooltipLeft" ng-show="showtooltipLeft">{{img.Extension}}</p>
         </div>
         <div id="main" ng-show="showtooltip">
-            <p class="tooltipRight">{{image.description}}</p>
-            <p class="tooltipLeft">{{image.description}}</p>
+            <p class="tooltipRight">{{img.Extension}}</p>
+            <p class="tooltipLeft">{{img.Extension}}</p>
         </div>
         
-        {{image.name}}
+        {{img.Name}}
         <br>
         
-        <img ng-src="{{image.src}}" ng-click="showFullImage(image.src)" ng-mouseover="toggleTooltip($index)" ng-mouseout="hideTooltip()" >
+        <img ng-src="{{img.Url}}" ng-mouseover="toggleTooltip($index)" ng-mouseout="hideTooltip()" >
         <br>
         
-        Оценка: {{image.rate.value}}
+        Оценка: {{img.Star}}
 	</p>
 </div>
