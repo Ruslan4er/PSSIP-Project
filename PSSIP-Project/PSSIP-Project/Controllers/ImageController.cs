@@ -42,7 +42,7 @@ namespace PSSIP_Project.Controllers
             var secondIndex = data.IndexOf(';')-firsIndex;
             var imageExtension =data.Substring(firsIndex,secondIndex) ;
             
-            //сделать расширение между / и ;(data)
+            
             var dataIndex = data.IndexOf("base64", StringComparison.Ordinal) + 7;
             var clearData = data.Substring(dataIndex);
             var fileData = Convert.FromBase64String(clearData);
@@ -85,7 +85,7 @@ namespace PSSIP_Project.Controllers
                 Url = Url.Content("~/image/" + fileName),
                 Name = Path.GetFileNameWithoutExtension(path),
                 Description = Path.GetExtension(path),                                          
-                Star = _random.Next(MaxStar)
+                Star = _random.Next(3,MaxStar)
             };
             return image;
         }
