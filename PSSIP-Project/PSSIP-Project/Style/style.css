@@ -38,7 +38,7 @@
 
 #menu ul {
     list-style: none;
-    
+    padding-left: 0;
 
 }
    
@@ -47,7 +47,12 @@
     }
 #menu a{
 	color: white;
+    text-decoration: none;
 }
+#menu a:hover {
+    color: #1a59bf; 
+    text-decoration: underline; 
+   }
 
 #menu img{
 	margin-left: 60px;
@@ -141,43 +146,35 @@ h1{
 }
 
 .tooltipRight{
-	background-color:#5c9bb7;
-
-	background-image:-webkit-linear-gradient(top, #5c9bb7, #5392ad);
-	background-image:-moz-linear-gradient(top, #5c9bb7, #5392ad);
-	background-image:linear-gradient(top, #5c9bb7, #5392ad);
-
-	box-shadow: 0 1px 1px #ccc;
-	border-radius:10px; 
+	
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
 	width: 310px;
-	height: 355px;	
+	height: 300px;	
 
 	
 	position: absolute;
-	left:110%;
-	margin-left:;
-	top:-20px;	
+    text-align: center; 
+   	left:50%;
+	margin-left:10px;
+	top:30px;	
 }
 
-.tooltipLeft{
-	background-color:#5c9bb7;
+.tooltipLeft {
 
-	background-image:-webkit-linear-gradient(top, #5c9bb7, #5392ad);
-	background-image:-moz-linear-gradient(top, #5c9bb7, #5392ad);
-	background-image:linear-gradient(top, #5c9bb7, #5392ad);
-
-	box-shadow: 0 1px 1px #ccc;
-	border-radius:10px; 
-	width: 310px;
-	height: 355px;	
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 210px;
+	height: 200px;	
 
 	
 	position: absolute;
-	left:-112%;
-	margin-left:;
-	top:-20px;	
-
-
+    text-align: center; 
+   	left:45%;
+	margin-left:10px;
+	top:130px;	
 }
 
 .modal-backdrop {
@@ -229,6 +226,18 @@ font-style:italic;
     }
 
 
+@media screen and (max-width: 950px) {
+
+    #header img {
+        height:220px;
+    }
+    #addNewImg{
+	
+	padding-left:0px;
+    }
+   
+}
+
 @media screen and (max-width: 700px) {
 
     #header img {
@@ -248,11 +257,53 @@ font-style:italic;
         height:150px;
     }
     #addNewImg{
-	
-	padding-left:0px;
+	    padding-left:0px;
     }
    
 }
+
+@media screen and (max-width: 580px) {
+    #header img {
+        height:120px;
+    }
+    #addNewImg{
+	    padding-left:0px;
+    }
+
+    #menu{
+	    background-image: none;
+	    float: left;
+	    width:100%;
+	    height: 50px;
+	    padding-top: 0px;
+	    padding-left: 0px;
+    }
+
+  
+    #menu a {
+        color: #1a59bf;
+    }
+    #menu a:hover {
+        background: #B0E0E6;
+        color:white;
+    }
+    #menu li {
+        margin:3px;
+        display: inline;
+    }
+    #menu img {
+        display:none;
+    }
+
+ #content{
+  
+	float: left;
+	width:100%;
+	height:auto;
+}
+
+}
+
 
 	
 

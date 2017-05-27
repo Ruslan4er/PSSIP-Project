@@ -65,25 +65,16 @@ angular.module('gallery', ['ngRoute'])
     	        }
     	    };
 
-    	    //Всплывающие подсказки
+    	    $scope.toggleTooltip = function () {
 
-    	    $scope.toggleTooltip = function (e) {
-            
-    	        if (e % 3 == 0) {
-    	            event.stopPropagation();
-    	            this.showtooltipRight = !$scope.showtooltipRight;
-    	        }
-
-    	        else {
-    	            event.stopPropagation();
-    	            this.showtooltipLeft = !$scope.showtooltipLeft;             
-    	        }
+    	        event.stopPropagation();
+    	        this.showtooltipLeft = !$scope.showtooltipLeft;
 
     	        $scope.hideTooltip = function () {
     	            this.showtooltipLeft = false;
-    	            this.showtooltipRight = false;
     	        }
     	    }
+    	     	   
 
     	    $scope.showFullImage = function (imageSrc) {
     	        	        const imageElement = document.createElement('img');
@@ -100,7 +91,7 @@ angular.module('gallery', ['ngRoute'])
     	        	    };
 
 	       
-	   
+    	 
 
     	    /*
              $scope.toggleTooltip = function (e,image) {
@@ -116,9 +107,19 @@ angular.module('gallery', ['ngRoute'])
     	}])
 
 
-	.controller('aboutUsController', ['$scope', 'DataImg', function ($scope, DataImg) {
-	    //Контроллер для описания
+	.controller('aboutUsController', ['$scope', function ($scope) {
+	    //Контроллер для описания 
 
+
+	    $scope.toggleTooltip = function () {
+
+	        event.stopPropagation();
+	        this.showtooltipRight = !$scope.showtooltipRight;
+
+	        $scope.hideTooltip = function () {
+	            this.showtooltipRight = false;
+	        }
+	    }
 	}])
 
 	.controller('AddNewImgController', ['$scope', 'dataCenter', function ($scope, dataCenter) {

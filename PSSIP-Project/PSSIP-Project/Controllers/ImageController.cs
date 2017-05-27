@@ -64,7 +64,7 @@ namespace PSSIP_Project.Controllers
         public JsonResult GetImage()
         {
             var serverPath = Server.MapPath("~");
-            var pathToImageFolder = Path.Combine(serverPath, "Img");
+            var pathToImageFolder = Path.Combine(serverPath, "image");
             var imageFile = Directory.GetFiles(pathToImageFolder);
             var imges = imageFile.Select(BuildImage);
             return Json(imges, JsonRequestBehavior.AllowGet);
@@ -74,7 +74,7 @@ namespace PSSIP_Project.Controllers
         {
             var serverPath = Server.MapPath("~");
 
-            return Path.Combine(serverPath, "Img", fileName);
+            return Path.Combine(serverPath, "image", fileName);
         }
 
         private Image BuildImage(string path)
@@ -82,7 +82,7 @@ namespace PSSIP_Project.Controllers
             var fileName = Path.GetFileName(path);
             var image = new Image
             {
-                Url = Url.Content("~/Img/" + fileName),
+                Url = Url.Content("~/image/" + fileName),
                 Name = Path.GetFileNameWithoutExtension(path),
                 Description = Path.GetExtension(path),                                          
                 Star = _random.Next(MaxStar)

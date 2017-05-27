@@ -1,6 +1,10 @@
-<h1 align="center">
-    Галерея
+
+<h1 align="center" >
+   <p ng-mouseover="toggleTooltip()" ng-mouseout="hideTooltip()">Галерея </p>
+
 </h1>
+<p style="font-size:20px; color:black; " class="tooltipLeft" ng-show="showtooltipLeft"> <br> <br> Посмотри какие <br>тут классные <br>фотки!</p>
+
 <div align="right">
 
     <label ng-repeat="extension in extensionsArray">
@@ -11,19 +15,12 @@
 
 <div ng-repeat="img in Images | filter:filterByExtension" class="imageGalleryClass" >
     <p>
-        <div id="main" >
-            <p class="tooltipRight" ng-show="showtooltipRight">{{img.Extension}}</p>
-            <p class="tooltipLeft" ng-show="showtooltipLeft">{{img.Extension}}</p>
-        </div>
-        <div id="main" ng-show="showtooltip">
-            <p class="tooltipRight">{{img.Extension}}</p>
-            <p class="tooltipLeft">{{img.Extension}}</p>
-        </div>
+        
         
         {{img.Name}}
         <br>
 
-        <img ng-src="{{img.Url}}" ng-click="showFullImage(img.Url)" ng-mouseover="toggleTooltip($index)" ng-mouseout="hideTooltip()">
+        <img ng-src="{{img.Url}}" ng-click="showFullImage(img.Url)" >
 
         <br>
         
