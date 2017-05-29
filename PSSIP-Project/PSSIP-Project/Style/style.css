@@ -235,7 +235,37 @@ font-style:italic;
 	
 	padding-left:0px;
     }
-   
+    .tooltipRight{
+	
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 280px;
+	height: 280px;	
+
+	
+	position: absolute;
+    text-align: center; 
+  	left:38%;
+	margin-left:5px;
+	top:0px;	
+}
+
+.tooltipLeft {
+
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 210px;
+	height: 200px;	
+
+	
+	position: absolute;
+    text-align: center; 
+   	left:45%;
+	margin-left:10px;
+	top:60px;	
+}
 }
 
 @media screen and (max-width: 700px) {
@@ -247,6 +277,37 @@ font-style:italic;
 	
 	padding-left:0px;
     }
+     .tooltipRight{
+	
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 280px;
+	height: 280px;	
+
+	
+	position: absolute;
+    text-align: center; 
+    left:8%;
+	margin-left:10px;
+	top:0px;	
+}
+
+.tooltipLeft {
+
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 210px;
+	height: 200px;	
+
+	
+	position: absolute;
+    text-align: center; 
+   	left:35%;
+	margin-left:10px;
+	top:10px;	
+}
    
 }
 
@@ -259,7 +320,37 @@ font-style:italic;
     #addNewImg{
 	    padding-left:0px;
     }
-   
+    .tooltipRight{
+	
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 280px;
+	height: 280px;	
+
+	
+	position: absolute;
+    text-align: center; 
+   	left:5%;
+	margin-left:5px;
+	top:0px;	
+}
+
+.tooltipLeft {
+
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 210px;
+	height: 200px;	
+
+	
+	position: absolute;
+    text-align: center; 
+   	left:45%;
+	margin-left:10px;
+	top:0px;	
+}
 }
 
 @media screen and (max-width: 580px) {
@@ -301,6 +392,38 @@ font-style:italic;
 	width:100%;
 	height:auto;
 }
+ .tooltipRight{
+	
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 280px;
+	height: 280px;	
+
+	
+	position: absolute;
+    text-align: center; 
+    left:5%;
+	margin-left:5px;
+	top:0px;	
+}
+
+.tooltipLeft {
+
+    background-image: url('cl.png'); 
+    background-size:cover;
+	opacity: 0.9;
+	width: 210px;
+	height: 200px;	
+
+	
+	position: absolute;
+    text-align: center; 
+   	left:15%;
+	margin-left:10px;
+	top:10px;	
+}
+
 
 }
 
